@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <script>
+        function idade() {
+            var resultado;
+            var idade = parseInt(document.getElementById("idade").value);
+            var nome = document.getElementById("nome").value;
+            // console.log(nome);
+            // console.log(idade);
+
+            if (idade <= 11) {
+                resultado = "criança";
+            } else if (idade <= 12 && 20) {
+                resultado = "adolescente";
+            } else if (idade < 21 && 65) {
+                resultado = "adulto";
+            } else if (idade < 65) {
+                resultado = "idoso";
+            
+            document.getElementById("resultado").innerHTML = nome + " é " + resultado;
+        }
+    </script>
+    <style>
+       * {
+            margin: 0px auto;
+            padding: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: oblique;
+            font-size: 18px;
+            border: 1px solid transparent;
+            width: 80%;
+        }
+
+        main {
+            border: 1px dashed #ffc06e;
+            margin: 8px auto;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            /* width: 80%; */
+            min-width: 30%;
+            background-color: antiquewhite;
+        }
+
+        header {
+            margin: 8px auto;
+            padding: 8px;
+            border: 1px dotted #e2b36d;
+            text-align: center;
+            align-items: center;
+            background-color: #ffff505c;
+        }
+
+        footer {
+            margin: 64px auto;
+            background-color: #ffff0046;
+            border: 1px solid #ffff00a0
+        }
+
+        button {
+            width: 50%;
+            height: 32px;
+            border-radius: 30px;
+            background: #ffc06e;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            margin: 5px auto;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        input {
+            border: 2px solid #ff00002d;
+        }
+    </style>
+ 
+</head>
+
+<body>
+
+    <h1 id="titulo">Classificação por idade</h1> <br><br>
+
+    
+
+    <form onsubmit="return age(event)">
+
+        <label>Digite seu nome:</label><br>
+        <input type="text" nome="nome" id="nome" placeholder="Exemplo: Nome" /><br><br>
+        <label>Digite sua idade:</label><br>
+        <input type="text" nome="idade" id="idade" placeholder="Exemplo: 16" /><br><br>
+        <button type="submit" value="enviar">ENVIAR</button>
+
+    </form>
+
+    <script src="script.js"></script>
+
+    <div id="resultado"></div>
+
+    <footer>
+        <p style="text-align: center;">© 2023 - Senai </p>
+    </footer>
+</body>
+</html> 
